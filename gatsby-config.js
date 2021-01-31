@@ -6,16 +6,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-layout",
-    "gatsby-plugin-mdx",
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-layout',
+    'gatsby-plugin-mdx',
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
           {
             family: `Montserrat`,
-            variants: [`400`, `600`, "700"],
+            variants: [`400`, `600`, '700'],
           },
         ],
       },
@@ -25,6 +25,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/src/data/articles`,
       },
     },
     `gatsby-transformer-sharp`,
